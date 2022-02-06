@@ -1,0 +1,24 @@
+﻿<Page x:Class="RestaurantManagement.WaiterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RestaurantManagement"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="WaiterPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="257*"/>
+
+
+
+        </Grid.RowDefinitions>
+        <Label Content="ברוך הבא מלצר" HorizontalAlignment="Stretch" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center"  VerticalAlignment="Stretch"/>
+        <Button Content="מצב שולחנות" HorizontalAlignment="Stretch"  Grid.Row="1" VerticalAlignment="Stretch" Width="120"  Height="50" FontSize=" 15" Click="Button_Click"/>
+        <Button Content="יציאה" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Grid.Row="1" Width="70" Height="30" Click="Button_Click_1"  />
+
+    </Grid>
+</Page>

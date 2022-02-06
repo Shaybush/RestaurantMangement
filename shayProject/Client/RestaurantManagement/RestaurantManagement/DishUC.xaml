@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="RestaurantManagement.DishUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantManagement"
+             mc:Ignorable="d" 
+             Height="150" Width="150">
+    <UserControl.Resources >
+        <local:ImageConverter x:Key="imageConverter" />
+    </UserControl.Resources>
+
+    <Button Background="WhiteSmoke" x:Name="Btn" ToolTip="{Binding Kuku}" MouseDoubleClick="UserConrol_Click">
+
+        <Button.Content>
+            <Grid Height="150" Width="150">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="20*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row=" 0"  Grid.RowSpan ="3" Background="Linen"  >
+                    <Image  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Source="{Binding Menu.Pic1, Converter={StaticResource imageConverter}}" />
+                </Grid>
+                <Grid Grid.Row="3">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"  VerticalAlignment="Stretch"  Height="15">
+                        <TextBlock  Text=" Price: "  FontStyle="Italic" FontWeight="Bold" Foreground="#FFC73939"  />
+                        <TextBlock Text="{Binding Menu.Price, StringFormat={}{0:c}}" FontStyle="Italic" FontWeight="Bold"  />
+                    </StackPanel>
+                   
+                </Grid>
+
+                <Grid Grid.Row="4 " Background="LightGreen" >
+                    <TextBlock Foreground="WhiteSmoke" x:Name="FoodName"  Text="{Binding Menu.FoodName}" FontStyle="Oblique" FontWeight="Bold"  HorizontalAlignment="Center"  VerticalAlignment="Stretch"/>
+                    
+                </Grid>
+
+
+            </Grid>
+        </Button.Content>
+    </Button>
+</UserControl>

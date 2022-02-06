@@ -1,0 +1,35 @@
+﻿<Page x:Class="RestaurantManagement.MainGuest"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RestaurantManagement"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainGuest">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="33*"/>
+        </Grid.ColumnDefinitions>
+        <Label HorizontalAlignment="Stretch"   Content="שלום אורח" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" VerticalAlignment="Stretch" Grid.Column="1"   Grid.Row="0" />
+
+        <Button x:Name="HelpClick" Content="עזרה" HorizontalAlignment="Stretch" Grid.Row="3" FontSize=" 20" FontWeight="Bold"  VerticalAlignment="Stretch" Width="130" Height="50" Grid.Column="0" Click="Button_Click_1">
+
+        </Button>
+        <Button Content="תפריט" HorizontalAlignment="Stretch" Grid.Row="3" FontSize=" 20" FontWeight="Bold"  VerticalAlignment="Stretch" Width="130" Height="50" Grid.Column="1" Click="Button_Click"/>
+        <Button Content="סיכום הזמנה" HorizontalAlignment="Stretch" Grid.Row="3"  FontSize=" 20" FontWeight="Bold" VerticalAlignment="Stretch" Width="130" Height="50" Grid.Column="2" Click="Button_Click_3" />
+        <Label x:Name="WaiterHelp" Content="מלצר בדרך אלייך" HorizontalAlignment="Center" Visibility="Collapsed" Grid.Row="3" VerticalAlignment="Stretch" FontWeight="Bold" FontSize=" 20"/>
+        <Button Content="יציאה"  HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="70" Click="Button_Click_2" Grid.Column="0"  Grid.Row="2"/>
+
+
+    </Grid>
+</Page>

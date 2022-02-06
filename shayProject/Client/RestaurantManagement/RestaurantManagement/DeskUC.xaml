@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="RestaurantManagement.DeskUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantManagement"
+             mc:Ignorable="d"  Name="Uc"
+             d:DesignHeight="100" d:DesignWidth="170">
+
+    <UserControl.Resources >
+        <local:BGConverter x:Key="bgConverter" />
+    </UserControl.Resources>
+    <!--<Button>
+        <Button.Content>
+            <Grid></Grid>
+        </Button.Content>
+        
+    </Button>-->
+
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*" />
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>-->
+    <Button x:Name="kuku" HorizontalAlignment="Left" Height="103"   VerticalAlignment="Bottom" Width="170" RenderTransformOrigin="0.5,0.5" Click="kuku_Click" Grid.RowSpan="6" Grid.ColumnSpan="3" MouseRightButtonDown="kuku_MouseRightButtonDown" Background="{Binding Desk.Job.Color,Converter={StaticResource bgConverter}}" ToolTip="{Binding Path=DeskToolTip}" >
+        <Button.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="22"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Name="textBlock" Grid.Row="1"  TextWrapping="Wrap" Text=":מספר סועדים"  Height="14" Width="74" VerticalAlignment="Bottom" FontSize="9.333" Grid.Column="0" TextAlignment="Center" Margin="38,0,38,4"  />
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Desk.Size}" VerticalAlignment="Top" Margin="55,0,0,0" Grid.Row="2" Height="16" Width="44" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock x:Name="textBlock2" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="{Binding Desk.Id}"  Height="20" VerticalAlignment="Top" FontWeight="Bold" FontSize="12" TextAlignment="Center" Margin="52,0,56,0"/>
+                <TextBlock x:Name="textBlock3" TextWrapping="Wrap" Text="{Binding Desk.Job.Name}"  Grid.Row="3" Height="16" Width="77" VerticalAlignment="Top" TextAlignment="Center" Grid.ColumnSpan="2">
+                    <TextBlock.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FFF1EEEE" Offset="0.86"/>
+                            <GradientStop Color="#FFD7D6EC" Offset="1"/>
+                        </RadialGradientBrush>
+                    </TextBlock.Background>
+                </TextBlock>
+
+            </Grid>
+        </Button.Content>
+    </Button>
+</UserControl>

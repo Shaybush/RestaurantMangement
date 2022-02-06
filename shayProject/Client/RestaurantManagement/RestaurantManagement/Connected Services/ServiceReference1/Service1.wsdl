@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WcfService/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WcfService/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WcfService/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WcfService/Service1/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Windows.Media" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_LoginWorker_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginWorker" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LoginWorker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginWorkerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAll" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllDesks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDesks" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllDesks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDesksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPosition" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDish_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDish" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDish_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDishResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobs" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllDishes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDishes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllDishes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDishesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertWorker_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertWorker" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertWorker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertWorkerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateWorker_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWorker" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateWorker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWorkerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteWorker_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWorker" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteWorker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWorkerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertDish_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDish" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertDish_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDishResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateDish_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDish" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateDish_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDishResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteDish_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDish" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteDish_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDishResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_WaitingWaiter_InputMessage">
+    <wsdl:part name="parameters" element="tns:WaitingWaiter" />
+  </wsdl:message>
+  <wsdl:message name="IService1_WaitingWaiter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WaitingWaiterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SaveImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SaveImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeskStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeskStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeskStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeskStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFreeDesk_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreeDesk" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFreeDesk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreeDeskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChangeDeskStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeDeskStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChangeDeskStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeDeskStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBill" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddDishToDesk_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDishToDesk" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddDishToDesk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDishToDeskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDeskList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeskList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDeskList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeskListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ss_InputMessage">
+    <wsdl:part name="parameters" element="tns:ss" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ss_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ssResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeskOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeskOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeskOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeskOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDeskMenuList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeskMenuList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDeskMenuList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeskMenuListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChangeStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChangeStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="LoginWorker">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LoginWorker" message="tns:IService1_LoginWorker_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LoginWorkerResponse" message="tns:IService1_LoginWorker_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAll" message="tns:IService1_GetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllResponse" message="tns:IService1_GetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDesks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllDesks" message="tns:IService1_GetAllDesks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllDesksResponse" message="tns:IService1_GetAllDesks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPosition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPosition" message="tns:IService1_GetPosition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPositionResponse" message="tns:IService1_GetPosition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDish">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDish" message="tns:IService1_GetDish_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDishResponse" message="tns:IService1_GetDish_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetJobs" message="tns:IService1_GetJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetJobsResponse" message="tns:IService1_GetJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDishes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllDishes" message="tns:IService1_GetAllDishes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllDishesResponse" message="tns:IService1_GetAllDishes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertWorker">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertWorker" message="tns:IService1_InsertWorker_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertWorkerResponse" message="tns:IService1_InsertWorker_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorker">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateWorker" message="tns:IService1_UpdateWorker_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateWorkerResponse" message="tns:IService1_UpdateWorker_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorker">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteWorker" message="tns:IService1_DeleteWorker_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteWorkerResponse" message="tns:IService1_DeleteWorker_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDish">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertDish" message="tns:IService1_InsertDish_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertDishResponse" message="tns:IService1_InsertDish_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDish">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateDish" message="tns:IService1_UpdateDish_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateDishResponse" message="tns:IService1_UpdateDish_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDish">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteDish" message="tns:IService1_DeleteDish_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteDishResponse" message="tns:IService1_DeleteDish_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WaitingWaiter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/WaitingWaiter" message="tns:IService1_WaitingWaiter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/WaitingWaiterResponse" message="tns:IService1_WaitingWaiter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetImage" message="tns:IService1_GetImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetImageResponse" message="tns:IService1_GetImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SaveImage" message="tns:IService1_SaveImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SaveImageResponse" message="tns:IService1_SaveImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeskStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeskStatus" message="tns:IService1_DeskStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeskStatusResponse" message="tns:IService1_DeskStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFreeDesk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFreeDesk" message="tns:IService1_GetFreeDesk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFreeDeskResponse" message="tns:IService1_GetFreeDesk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeDeskStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ChangeDeskStatus" message="tns:IService1_ChangeDeskStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ChangeDeskStatusResponse" message="tns:IService1_ChangeDeskStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetBill" message="tns:IService1_GetBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetBillResponse" message="tns:IService1_GetBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDishToDesk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddDishToDesk" message="tns:IService1_AddDishToDesk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddDishToDeskResponse" message="tns:IService1_AddDishToDesk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeskList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDeskList" message="tns:IService1_GetDeskList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDeskListResponse" message="tns:IService1_GetDeskList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ss">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ss" message="tns:IService1_ss_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ssResponse" message="tns:IService1_ss_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeskOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeskOrder" message="tns:IService1_DeskOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeskOrderResponse" message="tns:IService1_DeskOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeskMenuList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDeskMenuList" message="tns:IService1_GetDeskMenuList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDeskMenuListResponse" message="tns:IService1_GetDeskMenuList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ChangeStatus" message="tns:IService1_ChangeStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ChangeStatusResponse" message="tns:IService1_ChangeStatus_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoginWorker">
+      <soap:operation soapAction="http://tempuri.org/IService1/LoginWorker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDesks">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllDesks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPosition">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDish">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDishes">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllDishes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertWorker">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertWorker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorker">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateWorker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorker">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteWorker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDish">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertDish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDish">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateDish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDish">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteDish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WaitingWaiter">
+      <soap:operation soapAction="http://tempuri.org/IService1/WaitingWaiter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/SaveImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeskStatus">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeskStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFreeDesk">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetFreeDesk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeDeskStatus">
+      <soap:operation soapAction="http://tempuri.org/IService1/ChangeDeskStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBill">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDishToDesk">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddDishToDesk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeskList">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDeskList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ss">
+      <soap:operation soapAction="http://tempuri.org/IService1/ss" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeskOrder">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeskOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeskMenuList">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDeskMenuList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStatus">
+      <soap:operation soapAction="http://tempuri.org/IService1/ChangeStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfService/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

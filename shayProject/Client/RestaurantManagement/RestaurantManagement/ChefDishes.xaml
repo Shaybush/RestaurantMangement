@@ -1,0 +1,38 @@
+﻿<Page x:Class="RestaurantManagement.ChefDishes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RestaurantManagement"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ChefDishes">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <ListView x:Name="chefList">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="NumDesk"  Width="150"  DisplayMemberBinding="{Binding Desk.NumDesk1}" />
+                    <GridViewColumn Header="FoodName" Width="150"  DisplayMemberBinding="{Binding Menu.FoodName}" />
+                    <GridViewColumn Header="Amount" Width="150"  DisplayMemberBinding="{Binding Amount}" />
+                </GridView>
+            </ListView.View>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="SendToWaiter" ToolTip="SendToWaiter" Click="SendToWaiter_Click" >
+                        <MenuItem.Icon>
+                            <Image Source="images/update.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </ListView.ContextMenu>
+        </ListView>
+        <Button Content="חזור" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Bottom" Width="116" Height="45" Click="Button_Click"/>
+
+    </Grid>
+</Page>

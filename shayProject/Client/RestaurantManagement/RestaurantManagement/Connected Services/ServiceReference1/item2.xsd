@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WcfService/Service1/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Windows.Media" />
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WcfService/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Worker">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Gender1" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pos" nillable="true" type="tns:Position" />
+          <xs:element minOccurs="0" name="UserName1" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Worker" nillable="true" type="tns:Worker" />
+  <xs:complexType name="BaseEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseEntity" nillable="true" type="tns:BaseEntity" />
+  <xs:complexType name="Position">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Position" nillable="true" type="tns:Position" />
+  <xs:complexType name="WorkerList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Worker" nillable="true" type="tns:Worker" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkerList" nillable="true" type="tns:WorkerList" />
+  <xs:complexType name="DeskList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Desk" nillable="true" type="tns:Desk" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeskList" nillable="true" type="tns:DeskList" />
+  <xs:complexType name="Desk">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Job" nillable="true" type="tns:JobStatus" />
+          <xs:element minOccurs="0" name="NumDesk1" type="xs:int" />
+          <xs:element minOccurs="0" name="Size" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Desk" nillable="true" type="tns:Desk" />
+  <xs:complexType name="JobStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Windows.Media" minOccurs="0" name="Color" type="q1:Color" />
+          <xs:element minOccurs="0" name="Situation1" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobStatus" nillable="true" type="tns:JobStatus" />
+  <xs:complexType name="PositionList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Position" nillable="true" type="tns:Position" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PositionList" nillable="true" type="tns:PositionList" />
+  <xs:complexType name="TypeDishesList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TypeDishes" nillable="true" type="tns:TypeDishes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TypeDishesList" nillable="true" type="tns:TypeDishesList" />
+  <xs:complexType name="TypeDishes">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Ty" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TypeDishes" nillable="true" type="tns:TypeDishes" />
+  <xs:complexType name="JobStatusList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JobStatus" nillable="true" type="tns:JobStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobStatusList" nillable="true" type="tns:JobStatusList" />
+  <xs:complexType name="MenuList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Menuu" nillable="true" type="tns:Menuu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MenuList" nillable="true" type="tns:MenuList" />
+  <xs:complexType name="Menuu">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FoodName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GlutenFree" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Information" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pic1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Price" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="tns:TypeDishes" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Menuu" nillable="true" type="tns:Menuu" />
+  <xs:simpleType name="JS">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="פנוי">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="מלצר">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="טבח">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="מוכן">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="תפוס">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="JS" nillable="true" type="tns:JS" />
+  <xs:complexType name="DeskMenuList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeskMenu" nillable="true" type="tns:DeskMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeskMenuList" nillable="true" type="tns:DeskMenuList" />
+  <xs:complexType name="DeskMenu">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" type="xs:int" />
+          <xs:element minOccurs="0" name="Desk" nillable="true" type="tns:Desk" />
+          <xs:element minOccurs="0" name="Menu" nillable="true" type="tns:Menuu" />
+          <xs:element minOccurs="0" name="Stat" type="tns:JS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeskMenu" nillable="true" type="tns:DeskMenu" />
+</xs:schema>
